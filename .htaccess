@@ -1,0 +1,9 @@
+RewriteEngine On
+
+Options All -Indexes
+
+RewirteCond %{REQUEST_FILENAME} !-d
+RewirteCond %{REQUEST_FILENAME} !-f
+RewirteCond %{REQUEST_FILENAME} !-l
+
+RewirteRule ^(.*)$ index.php?url=$1
